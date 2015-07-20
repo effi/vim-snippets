@@ -223,20 +223,18 @@ snippet ft \footnote
 	\footnote{${0:text}}
 snippet fig figure environment (includegraphics)
 	\begin{figure}
-	\begin{center}
-		\includegraphics[scale=${1}]{Figures/${2}}
-	\end{center}
-	\caption{${3}}
-	\label{fig:${4}}
+	\centering
+		\cfinputfigure{${1}.pdf_tex}	
+	\caption{${2}}
+	\label{fig:${3}}
 	\end{figure}
 	${0}
 snippet tikz figure environment (tikzpicture)
 	\begin{figure}
-	\begin{center}
+	\centering
 	\begin{tikzpicture}[scale=${1:1}]
 		${2}
 	\end{tikzpicture}
-	\end{center}
 	\caption{${3}}
 	\label{fig:${4}}
 	\end{figure}
@@ -275,6 +273,28 @@ snippet col2 two-column environment
 			${0}
 		\end{column}
 	\end{columns}
+snippet gls
+	\gls{${1}}
+	${0}
+snippet Gls
+	\Gls{${1}}
+	${0}
+snippet glspl
+	\glspl{${1}}
+	${0}
+snippet Glspl
+	\Glspl{${1}}
+	${0}
+snippet glsdesc
+	\glsdesc{${1}}
+	${0}
+
+snippet glsentry
+	\glsentrytext{${1}}
+	${0}
+snippet glsentrypl
+	\glsentrytextpl{${1}}
+	${0}
 #delimiter
 snippet lr( left( right) 
 	\left( ${0} \right)
